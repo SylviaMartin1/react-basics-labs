@@ -1,8 +1,10 @@
 /* Import css styling */
 /* Import state */
 /* Import the Task component */
+/* Import the Form component */
 import './App.css';
 import React, { useState } from 'react';
+import AddTaskForm from './components/Form';
 import Task from './components/Task';
 
 function App() {
@@ -41,9 +43,9 @@ function App() {
           done={task.done}
           markDone={() => doneHandler(index)}
           deleteTask = {() => deleteHandler(index)}
-
         />
         ))}
+        <AddTaskForm />
     </div>
   );
 
