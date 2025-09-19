@@ -5,14 +5,15 @@ import React from 'react';
 /* Has the props (properties/attributes) title, deadline,description */
 /* Has the special prop 'children'which holds the contents of the component's elements */
 const Task = (props) => {
-    
+
     return (
-        <div className="card">
+          <div className="card" style={{backgroundColor: props.done ? 'lightgrey' : '#5bb4c4'}}>
             <p className="title">{props.title}</p>
             <p>Due: {props.deadline}</p>
             <p>{props.description}</p>
             <p><b>{props.priority}</b></p>
             <p>{props.children}</p>
+            <button onClick={props.markDone} className='doneButton'>Done</button>
         </div>
     )
 }
